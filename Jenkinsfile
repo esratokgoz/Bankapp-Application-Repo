@@ -48,9 +48,9 @@ pipeline {
 
         // Deploy targets, looked up at deploy time (no IPs or endpoints hard-coded)
         AWS_REGION            = 'eu-west-3'
-        ANSIBLE_SERVER_NAME   = 'team-1-ansible-server'  // Name tag of the Ansible server
-        SCRIPTS_BUCKET_PREFIX = 'team-1-ansible-scripts' // + "-<account id>": holds deploy-bankapp.yml
-        DB_INSTANCE           = 'team-1-db'              // RDS instance; endpoint + managed secret read from it
+        ANSIBLE_SERVER_NAME   = 'ansible_19thoct'  // Name tag of the Ansible server
+        SCRIPTS_BUCKET_PREFIX = 'ansible.tf' // + "-<account id>": holds deploy-bankapp.yml
+        DB_INSTANCE           = 'bankapp_db_19thoct'              // RDS instance; endpoint + managed secret read from it
         NVD_API_KEY            = credentials('nvd-key')  // optional: speeds up OWASP Dependency-Check
         // DAST - URL of the app as deployed on the stage hosts
         STAGE_APP_URL         = 'https://stage.everythingops.io'   // stage ALB (TLS on 443; 8080 is not exposed)
